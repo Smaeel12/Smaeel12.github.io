@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext);
+
+:root {
+    --background__color: #fff;
+    --text__color: #000;
+    --columns__border: #000000;
+    --active__columns__border: #000000;
+    --coloumn__bg: transpaent;
+    --yellow__column: #F3C236;
+    --green__column: #78B951;
+    --gray__column: #a4aec4;
+    --text__message: #a4aec4;
+    --border__raduis: 10px;
+    --bg: #fff;
+    --alerts_bg: #E5ECFF;
+    --font_family: 'Montserrat', 'Open Sans', sans-serif;
+    --bounce__delay: 200;
+    --flip__delay: 200;
+}
+
+:root.darkmode {
+    --background__color: #010101;
+    --text__color: #fff;
+    --columns__border: #ffffff;
+    --active__columns__border: #ffffff;
+    --coloumn__bg: transpaent;
+    --yellow__column: #e8aa00;
+    --green__column: #43b601;
+    --gray__column: #8e97a9;
+    --text__message: #8aaffe;
+}
+
+* {
+    font-family: var(--font_family);
+    color: var(--text__color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background__color);
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    padding: 0px 25% 0px 25%;
+}
+
+.text__messagebox {
+    position: absolute;
+    top: 20%;
+    background: var(--text__message);
+    text-align: center;
+    width: 40%;
+    padding: 50px;
+    z-index: 3;
+}
+
+footer {
+    position: absolute;
+    bottom: 5px;
+}

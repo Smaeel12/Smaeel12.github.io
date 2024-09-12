@@ -1,0 +1,49 @@
+@keyframes scale_animation {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.scale__animation {
+    animation-duration: calc(var(--bounce__delay) * 1ms);
+    animation-name: scale_animation !important;
+    border-color: var(--active__columns__border);
+}
+
+@keyframes flip__animation {
+    0% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.flip__animation {
+    transform-style: preserve-3d;
+    transform-origin: center;
+    animation-name: flip__animation;
+    animation-duration: calc(var(--flip__delay) * 1ms);
+}
+
+
+.yellow {
+    background-color: #F3C236 !important;
+}
+
+.green {
+    background-color: #78B951 !important;
+}
+
+.gray {
+    background-color: #a4aec4 !important;
+}
