@@ -25,7 +25,8 @@ const GameAudio = {
     unfillaudio: null,
 }
 
-Howler.volume(0);
+GameAudio.gameaudio.play()
+Howler.volume(20);
 
 
 let inputEvent = true

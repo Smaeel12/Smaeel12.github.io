@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
+        integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
+        crossorigin="anonymous"></script>
+    <link rel="icon" type='images/x-icon' href="icons/word.png">
+    <link rel="stylesheet" type='text/css' href="styles/style.css">
+    <link rel="stylesheet" type='text/css' href="styles/game.css">
+    <link rel="stylesheet" type='text/css' href="styles/animation.css">
+    <link rel="stylesheet" type='text/css' href="styles/header.css">
+    <link rel="stylesheet" type='text/css' href="styles/keyboard.css">
+</head>
+
+<body>
+    <header>
+        <div id="header__buttons">
+            <button id="language"></button>
+            <button id="linkChallenge"></button>
+            <button id="settings"></button>
+            <button id="stats"></button>
+            <button id="help"></button>
+        </div>
+        <hr>
+        <div class="liveset">
+            <button id="volume" class="volume-off"></button>
+            <button id="openKeyboard"></button>
+            <button id="dlmode">L</button>
+        </div>
+    </header>
+    <section class="modals">
+
+        <div id="modal__help" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="close-help">&times;</span>
+
+                <p>Guess the WORDLE in 6 tries.</p>
+
+                <p>
+                    Each guess must be a valid 5 letter word. Hit the enter button to
+                    submit.
+                </p>
+
+                <p>
+                    After each guess, the color of the tiles will change to show how
+                    close your guess was to the word.
+                </p>
+
+                <img src="icons/examples.png" id="examples" />
+
+                <hr />
+                <p>A new WORDLE will be available each day!</p>
+            </div>
+        </div>
+
+        <div id="modal__stats" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="close-stats">&times;</span>
+
+                <h2>STATISTICS</h2>
+
+                <h3><strong>Total</strong>: <span id="total-played"></span></h3>
+
+                <h3><strong>Wins</strong>: <span id="total-wins"></span></h3>
+
+                <h3><strong>Win %</strong>: <span id="win-pct"></span></h3>
+
+                <h3>
+                    <strong>Current Streak</strong>: <span id="current-streak"></span>
+                </h3>
+            </div>
+        </div>
+
+        <div id="modal__settings" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-settings">&times;</span>
+                <h2>SETTINGS</h2>
+                <div class="toggle__speed">
+                    <p class="option__header">Animation Speed</p>
+                    <p class="animation__speed"><b>x2</b></p>
+                </div>
+                <hr>
+                <div class="toggle__hitmode">
+                    <p class="option__header">Hint Mode</p>
+                    <p class="hint__mode"><b>false</b></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="game">
+        <div id="grid-container"></div>
+    </section>
+
+    <section class="keyboard">
+    </section>
+
+    <footer>
+        Created By ALX students
+    </footer>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/game.js"></script>
+<script src="js/header.js"></script>
+<script src="js/keyboard.js"></script>
+<script src="js/animation.js"></script>
+
+</html>
