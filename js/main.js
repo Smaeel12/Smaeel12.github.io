@@ -17,16 +17,13 @@ const GameAudio = {
     gameaudio: new Howl({
         src: ['../audio/gamemusic.mp3'],
         loop: true,
-        volume: 0.4
+        volume: 0.05
     }),
     winaudio: new Howl({ src: '../audio/wineffect.wav' }),
     popaudio: new Howl({ src: '../audio/popeffect.mp3' }),
     flipaudio: new Howl({ src: '../audio/flipeffect.wav' }),
     unfillaudio: null,
 }
-
-GameAudio.gameaudio.play()
-Howler.volume(20);
 
 
 let inputEvent = true

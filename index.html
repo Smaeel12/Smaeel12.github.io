@@ -9,31 +9,99 @@
 </head>
 
 <body>
-	<div class="container">
-		<h1>Welcome to Wordle</h1>
-		<p>Guess the word in 6 tries!</p>
-		<button id="play-button" onclick="window.location.href='game.html'">Play Now</button>
-	</div>
+	<!-- Header -->
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
+		</nav>
+	</header>
 
-	<section class="about">
-		<h2>About the Project</h2>
+	<!-- Intro Section -->
+	<section class="intro">
+		<img src="icons/cover-image.jpg" alt="Wordle Game Cover" class="cover-image">
+		<div class="intro-text">
+			<h1>Wordle Game</h1>
+			<p>A fun and addictive word guessing game</p>
+			<a href="game.html" class="button">Play the Game</a>
+		</div>
+	</section>
+	<!-- Features Section -->
+	<section id="features" class="features">
+		<h2>Key Features</h2>
+
+		<div class="feature">
+			<img src="icons/feautre1-image.png" alt="Feature 1">
+			<div class="feature-description">
+				<h3>Interactive Gameplay</h3>
+				<p>Engage in a highly interactive word guessing experience with dynamic sound effects and immersive
+					gameplay.</p>
+			</div>
+		</div>
+
+		<div class="feature">
+			<img src="icons/feautre2-image.png" alt="Feature 2" width="100px" height="200px">
+			<div class="feature-description">
+				<h3>Sound and Music</h3>
+				<p>Enjoy a rich auditory experience with sound effects that enhance the gameplay, making each guess feel
+					impactful.</p>
+			</div>
+		</div>
+
+		<div class="feature">
+			<img src="icons/feautre3-image.png" alt="Feature 3">
+			<div class="feature-description">
+				<h3>Real-Time Feedback</h3>
+				<p>Receive immediate feedback on each guess, helping you strategize your next move and increasing the
+					challenge and excitement.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about" class="about">
+		<h2>About This Project</h2>
 		<p>
-			This Wordle game was created as part of my portfolio to demonstrate my skills in
-			web development, frontend design, and game logic implementation.
+			This Wordle project was inspired by my love for word games and the challenge they provide in exercising the
+			brain.
+			It started as a personal project to build something both fun and functional, and has since evolved into a
+			polished portfolio piece.
+			This project also serves as a Portfolio Project for Alx SE Program.
+			You can find the source code and additional details on my GitHub repository below.
 		</p>
-		<p>
-			Developed by <strong>Ismail Boubkri</strong>, a passionate full-stack developer with expertise
-			in <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>Python</em>.
-		</p>
-		<p>
-			Collaborated with <strong>Kenza and Yassin</strong> who helped with testing,
-			UI/UX design, and game enhancements.
-		</p>
+
+		<div class="team">
+			<h3>Meet the Team</h3>
+			<div class="team-member">
+				<p><strong>Ismail Boubkri</strong> - Full-Stack Developer
+					<a href="https://www.linkedin.com/in/ismailboubkri/">LinkedIn</a> |
+					<a href="https://github.com/Smaeel12">GitHub</a>
+				</p>
+
+				<p><strong>Zakaria bahlaoui</strong> - Full-Stack Developer</p>
+				<p><strong>Kenza Merouar</strong> - Full-Stack Developer</p>
+			</div>
+		</div>
+
+		<div class="project-link">
+			<p>Check out the project on GitHub:</p>
+			<a href="https://github.com/Smaeel12/Smaeel12.github.io" class="button">GitHub Repository</a>
+		</div>
+	</section>
+
+	<!-- Optional Video Section -->
+	<section class="video">
+		<h2>Project Walkthrough</h2>
+		<video controls>
+			<source src="icons/project-video.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
 	</section>
 
 	<footer>
-		<p>&copy; 2024 Ismail | <a href="https://github.com/Smaeel12/Smaeel12.github.io" target="_blank">Visit My
-				Github</a></p>
+		<p>&copy; 2024 Ismail | <a href="https://github.com/Smaeel12" target="_blank">Visit My Portfolio</a></p>
 	</footer>
 
 </body>
