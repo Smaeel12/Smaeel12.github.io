@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="stylesGTW.css">   
+</head>
+<body>
+
+    <header>
+        <h1>Guess the Word</h1>
+    </header>
+
+    <main>
+        <div id="grid-container"></div>
+        <div id="message"></div>
+
+        <!-- Virtual Keyboard -->
+        <div id="keyboard" class="keyboard">
+            <div class="keyboard-row" id="letterRow1">
+                <!-- This is where the first row of letter keys will go -->
+            </div>
+            <div class="keyboard-row" id="letterRow2">
+                <!-- This is where the second row of letter keys will go -->
+            </div>
+            <div class="keyboard-row" id="actionRow">
+                <!-- Enter and Delete buttons -->
+                <button id="enterButton" class="key-button">Enter</button>
+                <button id="deleteButton" class="key-button">Delete</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Stylish Control Buttons -->
+    <div id="controls">
+        <button id="soundToggle" class="control-button">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="keyboardToggle" class="control-button">
+            <i class="fas fa-keyboard"></i>
+        </button>
+        <button id="themeToggle" class="control-button">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+    </div>
+
+    <footer>
+        <p>Created By cute alx students</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome Icons -->
+    <script src="scriptGTW.js"></script>
+
+</body>
+</html>
