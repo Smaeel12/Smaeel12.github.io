@@ -5,11 +5,7 @@ function animateKeyboard(char, cls1, cls2) {
     }
 }
 
-let find;
-
-const guessLetter = guessWord.split("");
-find = find2Letter(guessLetter);
-
+const find:
 async function animateRow(ignore) {
     let index = 0;
 
@@ -38,17 +34,3 @@ async function animateRow(ignore) {
 
     }
 }
-
-// appears to be intended to count the occurrences of each unique letter 
-// within an array of characters
-function find2Letter(array) {
-    const obj = {};
-    for (let i = 0; i < array.length; i++) {
-      if (obj[array[i]]) {
-        obj[array[i]]++;
-      } else {
-        obj[array[i]] = 1;
-      }
-    }
-    return obj;
-  }
