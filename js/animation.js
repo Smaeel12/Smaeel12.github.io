@@ -6,6 +6,10 @@ function animateKeyboard(char, cls1, cls2) {
 }
 
 let find;
+
+const respond = await validateWord()
+
+find = find2Letter(validWord)
 async function animateRow(ignore) {
     let index = 0;
 
