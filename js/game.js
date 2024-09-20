@@ -1,4 +1,5 @@
 // start the game
+let InputEvent = true;
 function startGame(apiword) {
     $('.text__messagebox').remove() // remove the loading game message
 

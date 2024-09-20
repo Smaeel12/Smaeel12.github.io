@@ -15,7 +15,7 @@
 .scale__animation {
     animation-duration: calc(var(--bounce__delay) * 1ms);
     animation-name: scale_animation !important;
-    border-color: var(--active__columns__border);
+    border-color: var(--accent);
 }
 
 @keyframes flip__animation {
@@ -33,17 +33,18 @@
     transform-origin: center;
     animation-name: flip__animation;
     animation-duration: calc(var(--flip__delay) * 1ms);
+    border-color: var(--accent);
 }
 
 
 .yellow {
-    background-color: #F3C236 !important;
+    background-color: var(--yellow) !important;
 }
 
 .green {
-    background-color: #78B951 !important;
+    background-color: var(--green) !important;
 }
 
 .gray {
-    background-color: #a4aec4 !important;
+    background-color: var(--gray) !important;
 }

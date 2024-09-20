@@ -17,7 +17,7 @@ const GameAudio = {
     gameaudio: new Howl({
         src: ['../audio/gamemusic.mp3'],
         loop: true,
-        volume: 0.05
+        volume: 1
     }),
     winaudio: new Howl({ src: '../audio/wineffect.wav' }),
     popaudio: new Howl({ src: '../audio/popeffect.mp3' }),
@@ -49,10 +49,6 @@ $(document).ready(function () {
         type: 'GET'
     })
 })
-
-$()
-
-
 
 function loadingGame() {
     displayMessage('loading...')

@@ -10,8 +10,8 @@ const Keyboard = {
 
     keyLayout: [
         "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
-        "A", "S", "D", "F", "G", "H", "J", "K", "L", "BACKSPACE",
-        "Z", "X", "C", "V", "B", "N", "M", "ENTER"
+        "A", "S", "D", "F", "G", "H", "J", "K", "L", "backspace",
+        "Z", "X", "C", "V", "B", "N", "M", "keyboard_return"
     ],
 
     init() {
@@ -31,91 +31,49 @@ const Keyboard = {
             .appendChild(this._createKeys());
         this.elements.keys =
             this.elements.keysContainer
-
-        this.elements.openKeyboard.addEventListener('click', () => {
-            Keyboard.count++;
-            if (Keyboard.count === 1) {
-                Keyboard.open();
-            } else {
-                Keyboard.close();
-                Keyboard.count = 0;
+        this.elements.keysContainer.addEventListener('click', function (event) {
+            if (inputEvent) {
+                if (event.target.textContent == 'backspace') {
+                    deleteData()
+                } else if (event.target.textContent == 'keyboard_return') {
+                    validateRow()
+                } else {
+                    addData(event.target.textContent)
+                }
             }
         })
     },
 
 
-    _createKeyBtn(iconName) {
-        this.keyElement =
-            document.createElement("button");
+    _createKeySpan(iconName) {
+        this.keyElement = document.createElement("span"); // create a key span
 
-        this.keyElement
-            .setAttribute("type", "button");
+        this.keyElement.classList.add("keyboard__key"); // add key style class
 
-        this.keyElement
-            .classList.add("keyboard__key");
-
-        if (iconName === "BACKSPACE") {
-            this.keyElement
-                .classList.add("backspace__icon");
-            this.keyElement.addEventListener('click', () => {
-                if (inputEvent) {
-                    deleteData()
-                }
-            })
-        } else if (iconName === "ENTER") {
-            this.keyElement
-                .classList.add("enter__icon");
-            this.keyElement.addEventListener('click', () => {
-                if (inputEvent) {
-                    validateRow()
-                }
-            })
-        } else {
-            this.keyElement.addEventListener('click', () => {
-                if (inputEvent) {
-                    addData(iconName)
-                }
-            })
+        if (iconName == 'keyboard_return' || iconName == 'backspace') {
+            this.keyElement.classList.add('material-symbols-outlined') // add corespendent icon
         }
-        if (iconName === "BACKSPACE" || iconName === "ENTER")
-            this.keyElement.classList.add('keyboard__key--wide')
 
-        this.keyElement.textContent = iconName;
-
+        this.keyElement.textContent = iconName; // add key text
     },
 
     _createKeys() {
         const fragment =
-            document.createDocumentFragment();
+            document.createDocumentFragment(); // new document fragment 
 
         this.keyLayout.forEach((key) => {
-            const insertLineBreak =
-                ["P", "L", "ENTER"].indexOf(key) !== -1;
+            const insertNewRow = ["Q", "A", "backspace"].indexOf(key); // split the keys into rows
 
-            this._createKeyBtn(key)
-            if (key === "BACKSPACE") {
-                this.keyElement.classList.add('backspace__icon');
-                this.keyElement.textContent = '';
+            if (insertNewRow !== -1) {
+                this.row = document.createElement('div') // create each row
+                this.row.classList.add('row-' + insertNewRow) // add row class
+                fragment.appendChild(this.row); // append the row to the fragment
             }
 
-            fragment.appendChild(this.keyElement);
+            this._createKeySpan(key); // create the key
 
-            if (insertLineBreak) {
-                fragment
-                    .appendChild(document.createElement("br"));
-            }
+            this.row.appendChild(this.keyElement); // add the key to the row
         });
         return fragment;
-    },
-
-    open() {
-        this.elements.main
-            .classList
-            .remove("keyboard--hidden");
-    },
-
-    close() {
-        this.elements.main
-            .classList.add("keyboard--hidden");
     },
 };

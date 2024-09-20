@@ -1,13 +1,15 @@
 $(document).ready(() => {
     $('#header__buttons').children().click(function () {
         $('.modals').css('display', 'block')
-        console.log(`modal__${$(this).attr('id')}`)
         $(`#modal__${$(this).attr('id')}`).css('display', 'block')
     })
 })
 
-$('.modals').click(() => {
-    $('.modals').css('display', 'none')
+$('.modals').click(function (e) {
+    $("section [id^='modal__']").css('display', 'none')
+    if (e.target == $("#modal__settings")[0]) {
+        $('.modals').css('display', 'none')
+    }
 })
 
 $('.close').click(() => {
@@ -39,26 +41,36 @@ $('.animation__speed').click(() => {
     }
 })
 
-$('#volume').click(function () {
-    if ($(this).hasClass('volume-off')) {
-        $(this).removeClass('volume-off')
-        Howler.volume(1);
+$('#volume .material-symbols-outlined').click(function () {
+    if ($(this).text() == 'music_off') {
+        $(this).text('music_note')
         GameAudio.gameaudio.play()
     }
     else {
+        $(this).text('music_off')
         GameAudio.gameaudio.pause()
-        Howler.volume(0);
-        $(this).addClass('volume-off')
+    }
+})
+
+$('#openKeyboard .material-symbols-outlined').click(function () {
+    if ($(this).text() == 'keyboard') {
+        $(this).text('keyboard_off')
+        $('.keyboard').css('display', 'none')
+    }
+    else {
+        $(this).text('keyboard')
+        $('.keyboard').css('display', 'block')
     }
 })
 
 $('.hint__mode').click(function () {
     if (Settings.hintMode) {
         Settings.hintMode = false
+        $('.num').css('display', 'none')
     } else {
         Settings.hintMode = true
+        $('.num').css('display', 'block')
     }
-    $('#num').toggle()
     $('.hint__mode').text(String(Settings.hintMode))
 })
 

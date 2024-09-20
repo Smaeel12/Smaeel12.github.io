@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
         integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
         crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" type='images/x-icon' href="icons/word.png">
     <link rel="stylesheet" type='text/css' href="styles/style.css">
     <link rel="stylesheet" type='text/css' href="styles/game.css">
@@ -20,21 +22,51 @@
 <body>
     <header>
         <div id="header__buttons">
-            <button id="language"></button>
-            <button id="linkChallenge"></button>
-            <button id="settings"></button>
-            <button id="stats"></button>
-            <button id="help"></button>
+            <button id="language">
+                <span class="material-symbols-outlined">language</span>
+            </button>
+            <button id="linkChallenge">
+                <span class="material-symbols-outlined">link</span>
+            </button>
+            <button id="settings">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+            <button id="stats">
+                <span class="material-symbols-outlined">bar_chart</span>
+            </button>
+            <button id="help">
+                <span class="material-symbols-outlined">help</span>
+            </button>
         </div>
         <hr>
         <div class="liveset">
-            <button id="volume" class="volume-off"></button>
-            <button id="openKeyboard"></button>
-            <button id="dlmode">L</button>
+            <button id="volume">
+                <span class="material-symbols-outlined">music_off</span>
+            </button>
+            <button id="openKeyboard">
+                <span class="material-symbols-outlined">keyboard</span>
+            </button>
+            <button id="dlmode">
+                <span class="material-symbols-outlined">dark_mode</span>
+            </button>
         </div>
     </header>
     <section class="modals">
-
+        <div id="modal__language" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-settings">&times;</span>
+                <h2>LANGUAGES</h2>
+                <h3>only english available at the moment</h3>
+            </div>
+        </div>
+        <div id="modal__linkChallenge" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-settings">&times;</span>
+                <h2>Share</h2>
+                <h3>share this word as challenge to your freinds</h3>
+                <a></a>
+            </div>
+        </div>
         <div id="modal__help" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
@@ -95,15 +127,13 @@
             </div>
         </div>
         </div>
-        </div>
     </section>
 
     <section id="game">
         <div id="grid-container"></div>
+        <div class="keyboard"></div>
     </section>
 
-    <section class="keyboard">
-    </section>
 
     <footer>
         Created By ALX students

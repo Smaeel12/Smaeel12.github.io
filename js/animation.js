@@ -12,19 +12,19 @@ async function animateRow(ignore) {
             setTimeout(() => {
                 if ($(element).text() === guessWord.charAt(index++)) {
                     animateKeyboard($(element).text(), 'scale__animation', 'green')
-                    if (!ignore) $('<span>', { id: 'num' }).appendTo(element).text(CharMap[$(element).text()])
+                    if (!ignore) $('<span>', { class: 'num' }).appendTo(element).text(CharMap[$(element).text()])
                     $(element).addClass('flip__animation green')
                 }
                 else if (guessWord.includes($(element).text())) {
                     animateKeyboard($(element).text(), 'scale__animation', 'yellow')
-                    console.log(CharMap)
-                    if (!ignore) $('<span>', { id: 'num' }).appendTo(element).text(CharMap[String($(element).text())])
+                    if (!ignore) $('<span>', { class: 'num' }).appendTo(element).text(CharMap[String($(element).text())])
                     $(element).addClass('flip__animation yellow')
                 }
                 else {
                     animateKeyboard($(element).text(), 'scale__animation', 'gray')
                     $(element).addClass('flip__animation gray');
                 }
+                if (Settings.hintMode) $('.num').css('display', 'block')
                 GameAudio.flipaudio.play()
                 resolve();
             }, TimeVars.flipTime)
