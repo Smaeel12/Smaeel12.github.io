@@ -7,9 +7,9 @@ function animateKeyboard(char, cls1, cls2) {
 
 let find;
 
-const respond = await validateWord()
+const guessLetter = guessWord.split("");
+find = find2Letter(guessLetter);
 
-find = find2Letter(validWord);
 async function animateRow(ignore) {
     let index = 0;
 
