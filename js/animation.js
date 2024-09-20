@@ -4,8 +4,6 @@ function animateKeyboard(char, cls1, cls2) {
         $(`.keyboard__key:contains(${char})`).first().addClass(cls1 + ' ' + cls2)
     }
 }
-
-const find:
 async function animateRow(ignore) {
     let index = 0;
 
