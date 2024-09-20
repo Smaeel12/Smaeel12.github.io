@@ -9,7 +9,7 @@ let find;
 
 const respond = await validateWord()
 
-find = find2Letter(validWord)
+find = find2Letter(validWord);
 async function animateRow(ignore) {
     let index = 0;
 
@@ -39,6 +39,8 @@ async function animateRow(ignore) {
     }
 }
 
+// appears to be intended to count the occurrences of each unique letter 
+// within an array of characters
 function find2Letter(array) {
     const obj = {};
     for (let i = 0; i < array.length; i++) {
