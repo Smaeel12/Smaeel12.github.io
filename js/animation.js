@@ -4,6 +4,8 @@ function animateKeyboard(char, cls1, cls2) {
         $(`.keyboard__key:contains(${char})`).first().addClass(cls1 + ' ' + cls2)
     }
 }
+
+let find;
 async function animateRow(ignore) {
     let index = 0;
 
@@ -32,3 +34,15 @@ async function animateRow(ignore) {
 
     }
 }
+
+function find2Letter(array) {
+    const obj = {};
+    for (let i = 0; i < array.length; i++) {
+      if (obj[array[i]]) {
+        obj[array[i]]++;
+      } else {
+        obj[array[i]] = 1;
+      }
+    }
+    return obj;
+  }
