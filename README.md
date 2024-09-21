@@ -11,7 +11,6 @@ This project is a simple **Guess the word** built as part of our portfolio to de
 - [Installation](#installation)
 - [Usage](#usage)
 
-
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
 - **Deployment**: Hosted on [GitHub Pages](https://smaeel12.github.io/) or a web server like Nginx.
@@ -24,7 +23,10 @@ This project is a simple **Guess the word** built as part of our portfolio to de
 ## Installation
 ## Usage
   To start playing, open the game in your browser, enter a 5-letter word, and submit your guess. You have 6 attempts to guess the correct word.
-
+## Contributors
+ Ismail Boubkri - Full-Stack Developer
+ Zakaria bahlaoui - Full-Stack Developer
+ Kenza Merouar - Full-Stack Developer
 
 ### 1. Clone the Repository
 ```bash
