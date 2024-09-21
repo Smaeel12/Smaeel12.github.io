@@ -9,7 +9,7 @@ This project is a simple **Guess the word** built as part of our portfolio to de
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Contributors](#contributors)
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
@@ -26,8 +26,8 @@ This project is a simple **Guess the word** built as part of our portfolio to de
   You have 6 attempts to guess the correct word.  
 
 ## Contributors
- **Ismail Boubkri** - Full-Stack Developer
- **Zakaria Bahlaoui** - Full-Stack Developer
+ **Ismail Boubkri** - Full-Stack Developer  
+ **Zakaria Bahlaoui** - Full-Stack Developer  
  **Kenza Merouar** - Full-Stack Developer
 
 ### 1. Clone the Repository
