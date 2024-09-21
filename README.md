@@ -9,8 +9,7 @@ This project is a simple **Guess the word** built as part of our portfolio to de
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Installation](#installation)
-- [Contributors](#contributors)
-
+- [Usage](#usage)
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
@@ -22,15 +21,15 @@ This project is a simple **Guess the word** built as part of our portfolio to de
 - **Portfolio Integration**: Includes information about the developer and the project as part of the portfolio showcase.
 
 ## Installation
- **Usage**
+  **Usage**
   To start playing, open the game in your browser, enter a 5-letter word, and submit your guess. 
-  You have 6 attempts to guess the correct word.
+  You have 6 attempts to guess the correct word.  
 
 ## Contributors
-**Ismail Boubkri** - Full-Stack Developer  
-**Zakaria Bahlaoui** - Full-Stack Developer  
-**Kenza Merouar** - Full-Stack Developer
+ **Ismail Boubkri** - Full-Stack Developer
+ **Zakaria Bahlaoui** - Full-Stack Developer
+ **Kenza Merouar** - Full-Stack Developer
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/worKenza Merouar - Full-Stack Developerdle-game.git
+git clone https://github.com/yourusername/wordle-game.git
