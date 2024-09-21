@@ -27,7 +27,7 @@ This project is a simple **Guess the word** built as part of our portfolio to de
 
 ## Installation
 
-**Usage**
+**Usage** :
 To start playing, open the game in your browser, enter a 5-letter word, and submit your guess.
 You have 6 attempts to guess the correct word.
 
