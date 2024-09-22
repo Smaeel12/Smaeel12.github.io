@@ -1,10 +1,39 @@
+let inputEvent = true
+let userWord = '';
+let guessWord = '';
+let $row = null;
+let $col = null;
+
 const TimeVars = {
     bounceAnim: 600,
     doneDelay: 600,
-    flipTime: 600,
+    flipTime: 0,
     // flipTime: $(':root').css('--flip__delay'),
     // doneDelay: this.flipTime + 200,
     // bounceAnim: $(':root').css('--bounce__delay')
+}
+
+Game = {
+    currentGuesses: localStorage.getItem('currentGuesses') ? JSON.parse(localStorage.getItem('currentGuesses')) : [],
+    stats: localStorage.getItem('stats') ? JSON.parse(localStorage.getItem('stats')) : { gamePlayed: 0, wins: 0, winspers: 0, currentstreak: 0 },
+    createGrid: function (words) {
+        for (let r = 0; r < 6; r++) {
+            $row = $('<div>', { class: 'rows' }).appendTo('#grid-container');
+            for (let c = 0; c < 5; c++) {
+                element = $('<div>', { class: 'columns' }).appendTo($row)
+                if (words[r]) { $(element).text(words[r][c]) }
+            }
+            if (words[r]) animateRow(false)
+        }
+        TimeVars.flipTime = 600
+    },
+    loadData: function () {
+        $('#total-played').text(this.stats.gamePlayed)
+        $('#total-wins').text(this.stats.wins)
+        $('#win-pct').text(this.stats.winspers)
+        $('#current-streak').text('not available')
+        this.createGrid(this.currentGuesses)
+    },
 }
 
 const Settings = {
@@ -26,20 +55,10 @@ const GameAudio = {
 }
 
 
-let inputEvent = true
-let userWord = '';
-let guessWord = '';
-let $row = null;
-let $col = null;
 
 $(document).ready(function () {
     Keyboard.init();
-    for (let r = 0; r < 6; r++) {
-        const $row = $('<div>', { class: 'rows' }).appendTo('#grid-container');
-        for (let c = 0; c < 5; c++) {
-            element = $('<div>', { class: 'columns' }).appendTo($row)
-        }
-    }
+    Game.loadData()
     $.ajax({
         url: 'https://words.dev-apis.com/word-of-the-day',
         beforeSend: loadingGame,

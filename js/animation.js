@@ -10,6 +10,7 @@ async function animateRow(ignore) {
     for (const element of $row.children()) {
         await new Promise((resolve) => {
             setTimeout(() => {
+                console.log(TimeVars.flipTime)
                 if ($(element).text() === guessWord.charAt(index++)) {
                     animateKeyboard($(element).text(), 'scale__animation', 'green')
                     if (!ignore) $('<span>', { class: 'num' }).appendTo(element).text(CharMap[$(element).text()])

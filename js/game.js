@@ -1,5 +1,4 @@
 // start the game
-let InputEvent = true;
 function startGame(apiword) {
     $('.text__messagebox').remove() // remove the loading game message
 
@@ -13,7 +12,7 @@ function startGame(apiword) {
     console.log(guessWord)
 
     $(document).ready(function () {
-        $row = $('#grid-container').children().first();
+        $row = Game.currentGuesses ? $('#grid-container').children().eq(Game.currentGuesses.length) : $('#grid-container').children().first();
         $col = $row.children().first(); // Start with the first row and its columns
 
         $(document).keyup(function (event) {
@@ -58,6 +57,8 @@ async function validateRow() {
             const res = await validateWord()
             $('.text__messagebox').remove()
             if (res.validWord) {
+                Game.currentGuesses.push(userWord)
+                localStorage.setItem('currentGuesses', JSON.stringify(Game.currentGuesses))
                 if (userWord !== guessWord) {
                     await animateRow(false)
                 } else {
@@ -125,7 +126,11 @@ function endGame(userWord, guessWord) {
     if (userWord === guessWord) {
         GameAudio.winaudio.play()
         setTimeout(displayMessage('YOU WON', 1000), TimeVars.doneDelay)
+        Game.stats.statswins += 1
     } else {
         setTimeout(displayMessage('GAME OVER', 1000), TimeVars.doneDelay)
     }
+    Game.stats.gamePlayed += 1
+    localStorage.setItem('stats', JSON.stringify(Game.stats))
+    localStorage.removeItem('currentGuesses')
 }

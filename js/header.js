@@ -5,13 +5,6 @@ $(document).ready(() => {
     })
 })
 
-$('.modals').click(function (e) {
-    $("section [id^='modal__']").css('display', 'none')
-    if (e.target == $("#modal__settings")[0]) {
-        $('.modals').css('display', 'none')
-    }
-})
-
 $('.close').click(() => {
     $("section [id^='modal__']").css('display', 'none')
     $('.modals').css('display', 'none')
