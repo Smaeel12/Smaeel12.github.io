@@ -33,10 +33,9 @@ You have 6 attempts to guess the correct word.
 
 ## Contributors
 
-**Ismail Boubkri** - Full-Stack Developer  
 **Zakaria Bahlaoui** - Full-Stack Developer  
-**Kenza Merouar** - Full-Stack Developer
-
+**Ismail Boubkri** - Full-Stack Developer 
+**Kenza Merouar** - Full-Stack Developer(Front-end_specialization)
 ### 1. Clone the Repository
 
 ```bash
