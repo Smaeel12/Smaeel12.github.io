@@ -1,6 +1,6 @@
 # Guess the word- Portfolio Project
 
-![Game Screenshot](icons/feautre1-image.png)
+![Game Screenshot](icons/gtw%20interface.png)
 
 ## Overview
 
