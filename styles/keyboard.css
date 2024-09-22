@@ -1,5 +1,5 @@
 .keyboard {
-    width: 70%;
+    width: 80%;
     background: transparent;
     transition: bottom 0.4s;
     padding: 10px;
@@ -30,7 +30,7 @@
     border: none;
     background: var(--primary);
     color: var(--foreground);
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     outline: none;
     cursor: pointer;
     display: inline-flex;
@@ -45,7 +45,7 @@
 
 .keyboard__key.material-symbols-outlined {
     font-weight: 600;
-    font-size: 26px;
+    font-size: 35px;
 }
 
 @media screen and (max-width: 800px) {
