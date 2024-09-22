@@ -2,9 +2,9 @@ const TimeVars = {
     bounceAnim: 600,
     doneDelay: 600,
     flipTime: 600,
-    // flipTime: $(':root').css('--flip__delay'),
-    // doneDelay: this.flipTime + 200,
-    // bounceAnim: $(':root').css('--bounce__delay')
+    //flipTime: $(':root').css('--flip__delay'),
+    //doneDelay: this.flipTime + 200,
+    //bounceAnim: $(':root').css('--bounce__delay')
 }
 
 const Settings = {
