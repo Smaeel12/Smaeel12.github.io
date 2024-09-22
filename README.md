@@ -33,8 +33,8 @@ You have 6 attempts to guess the correct word.
 
 ## Contributors
 
-**Zakaria Bahlaoui** - Full-Stack Developer  
-**Ismail Boubkri** - Full-Stack Developer 
+**Zakaria Bahlaoui** - Full-Stack Developer 
+**Ismail Boubkri** - Full-Stack Developer   
 **Kenza Merouar** - Full-Stack Developer(Front-end_specialization)
 ### 1. Clone the Repository
 
