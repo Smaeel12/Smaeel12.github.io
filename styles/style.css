@@ -17,12 +17,12 @@
 }
 
 :root.darkmode {
-    --background: #33200B;
-    --primary: #798110;
-    --secondary: #24cd62;
-    --tertiary: #674a2c;
-    --foreground: #915A20;
-    --accent: #6F4518;
+    --background: #0a0a11;
+    --primary: #fbc24735;
+    --secondary: #24cd626f;
+    --tertiary: #89783660;
+    --foreground:#f55539;
+    --accent: #7f5239;
     --green: darkgreen;
     --yellow: rgb(204, 204, 20);
     --gray: darkgray;
