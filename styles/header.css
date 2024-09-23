@@ -33,6 +33,10 @@ header button {
 }
 
 #header__buttons button:nth-of-type(3) {
+    width: 15%;
+}
+
+#header__buttons button:nth-of-type(4) {
     margin-left: auto !important;
     margin-right: auto !important;
 }

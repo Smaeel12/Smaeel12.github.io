@@ -5,21 +5,21 @@
     --bounce__delay: 200;
     --flip__delay: 200;
     --box_border_raduis: 10px;
-    --primary: #8df0e3b0;
-    --secondary: #24cd62;
-    --tertiary: #f0ead1;
+    --primary: #FAF0E6;
+    --secondary: #E8CCAF;
+    --tertiary: #fbf8f5;
     --background: #fff;
-    --foreground: #6849d8;
-    --accent: #7f5239;
-    --green: #76d876;
-    --yellow: #ecd360;
-    --gray: #b6b3b3;
+    --foreground: #695239;
+    --accent: #7F5C39;
+    --green: #56AD49;
+    --yellow: #EBCD41;
+    --gray: #e3dedd;
 }
 
 :root.darkmode {
     --background: #0a0a11eb;
     --primary: #fbc24735;
-    --secondary: #24cd62;
+    --secondary: #d9786799;
     --tertiary: #89783660;
     --foreground:#f55539;
     --accent: #7f5239;

@@ -1,8 +1,17 @@
 $(document).ready(() => {
-    $('#header__buttons').children().click(function () {
-        $('.modals').css('display', 'block')
-        $(`#modal__${$(this).attr('id')}`).css('display', 'block')
-    })
+    for (el of $('#header__buttons').children()) {
+        if ($(el).attr('id') !== 'giveup') {
+            $(el).click(function () {
+                $('.modals').css('display', 'block')
+                $(`#modal__${$(this).attr('id')}`).css('display', 'block')
+            })
+        } else {
+            $(el).click(function () {
+                sessionStorage.removeItem('currentGuesses')
+                location.reload()
+            })
+        }
+    }
 })
 
 $('.close').click(() => {

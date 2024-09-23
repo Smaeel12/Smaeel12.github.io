@@ -8,14 +8,11 @@ const TimeVars = {
     bounceAnim: 600,
     doneDelay: 600,
     flipTime: 600,
-    // flipTime: $(':root').css('--flip__delay'),
-    // doneDelay: this.flipTime + 200,
-    // bounceAnim: $(':root').css('--bounce__delay')
 }
 
 Game = {
     currentGuesses: sessionStorage.getItem('currentGuesses') ? JSON.parse(sessionStorage.getItem('currentGuesses')) : [],
-    stats: sessionStorage.getItem('stats') ? JSON.parse(sessionStorage.getItem('stats')) : { gamePlayed: 0, wins: 0, winspers: 0, currentstreak: 0 },
+    stats: localStorage.getItem('stats') ? JSON.parse(localStorage.getItem('stats')) : { gamePlayed: 0, wins: 0, winspers: 0, currentstreak: 0 },
     createGrid: function (words) {
         for (let r = 0; r < 6; r++) {
             $row = $('<div>', { class: 'rows' }).appendTo('#grid-container');
@@ -25,7 +22,6 @@ Game = {
             }
             if (words[r]) animateRow(false)
         }
-        TimeVars.flipTime = 600
     },
     loadData: function () {
         $('#total-played').text(this.stats.gamePlayed)
@@ -53,8 +49,6 @@ const GameAudio = {
     flipaudio: new Howl({ src: '../audio/flipeffect.wav' }),
     unfillaudio: null,
 }
-
-
 
 $(document).ready(function () {
     Keyboard.init();

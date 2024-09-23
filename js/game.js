@@ -131,6 +131,6 @@ function endGame(userWord, guessWord) {
         setTimeout(displayMessage('GAME OVER', 1000), TimeVars.doneDelay)
     }
     Game.stats.gamePlayed += 1
-    sessionStorage.setItem('stats', JSON.stringify(Game.stats))
+    localStorage.setItem('stats', JSON.stringify(Game.stats))
     sessionStorage.removeItem('currentGuesses')
 }
