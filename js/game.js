@@ -58,7 +58,7 @@ async function validateRow() {
             $('.text__messagebox').remove()
             if (res.validWord) {
                 Game.currentGuesses.push(userWord)
-                localStorage.setItem('currentGuesses', JSON.stringify(Game.currentGuesses))
+                sessionStorage.setItem('currentGuesses', JSON.stringify(Game.currentGuesses))
                 if (userWord !== guessWord) {
                     await animateRow(false)
                 } else {
@@ -131,6 +131,6 @@ function endGame(userWord, guessWord) {
         setTimeout(displayMessage('GAME OVER', 1000), TimeVars.doneDelay)
     }
     Game.stats.gamePlayed += 1
-    localStorage.setItem('stats', JSON.stringify(Game.stats))
-    localStorage.removeItem('currentGuesses')
+    sessionStorage.setItem('stats', JSON.stringify(Game.stats))
+    sessionStorage.removeItem('currentGuesses')
 }

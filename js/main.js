@@ -14,8 +14,8 @@ const TimeVars = {
 }
 
 Game = {
-    currentGuesses: localStorage.getItem('currentGuesses') ? JSON.parse(localStorage.getItem('currentGuesses')) : [],
-    stats: localStorage.getItem('stats') ? JSON.parse(localStorage.getItem('stats')) : { gamePlayed: 0, wins: 0, winspers: 0, currentstreak: 0 },
+    currentGuesses: sessionStorage.getItem('currentGuesses') ? JSON.parse(sessionStorage.getItem('currentGuesses')) : [],
+    stats: sessionStorage.getItem('stats') ? JSON.parse(sessionStorage.getItem('stats')) : { gamePlayed: 0, wins: 0, winspers: 0, currentstreak: 0 },
     createGrid: function (words) {
         for (let r = 0; r < 6; r++) {
             $row = $('<div>', { class: 'rows' }).appendTo('#grid-container');
